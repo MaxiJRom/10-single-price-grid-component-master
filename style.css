@@ -1,0 +1,215 @@
+/* ============= General Styles ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============= Typography ================= */
+html {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.cyan {
+    color: var(--cyan);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.gray {
+    color: var(--gray);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+/* ============= Colors ================= */
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --gray: hsl(204, 43%, 93%);
+    --blue: hsl(218, 22%, 67%);
+    --white: hsl(100, 100%, 100%);
+}
+
+
+/* ============= Layout ================= */
+body {
+    position: relative;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    flex: 1 0 250px;
+}
+
+
+@media (min-width: 460px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .box:first-child {
+        grid-column: 1/-1;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bg-cyan h3 {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ============= Component Styles ================= */
+
+.container {
+    margin: 1.5rem 1rem;
+    max-width: 610px;
+    min-height: 450px;
+}
+
+/* -------------------------------------------------- */
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-white h2 {
+    margin: 1rem 0;
+}
+
+.bg-white>p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* -------------------------------------------- */
+.bg-cyan {
+    background-color: var(--cyan);
+}
+
+.bg-cyan h3 {
+    font-size: 1.8rem;
+}
+
+.bg-cyan span {
+    margin-left: 1rem;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .4);
+}
+
+.bg-cyan p {
+    font-size: 0.9rem;
+    margin:10px 0;
+    line-height: 1.2rem;
+}
+
+.bg-cyan a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+    padding: .8rem 0;
+    border-radius: .4rem;
+    transition: background-color ease .3s;
+    box-shadow: 0 0 5px rgba(100, 100, 100, .6);
+}
+
+.bg-cyan a:hover {
+    background-color: hsl(61, 96%, 40%);
+}
+
+/* -------------------------------------------- */
+
+.bg-blue {
+    background-color: hsla(179, 62%, 43%, 0.8);
+}
+
+.bg-blue ul {
+    list-style: none;
+    margin-top: 1rem;
+    flex: 1;
+    font-size: 0.8rem;
+}
+
+/* -------------------------------------------- */
+
+.container {
+    box-shadow: 0 0 25px var(--blue);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.box {
+    padding: min(2.5rem, 8vh) min(2.6rem, 5vw);
+}
+
+
+.bg-gray {
+    background-color: var(--gray);
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
